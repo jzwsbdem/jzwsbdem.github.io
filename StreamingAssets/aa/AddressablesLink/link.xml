@@ -20,6 +20,7 @@
     <type fullname="DataManager" preserve="all" />
     <type fullname="DataPlayerState" preserve="all" />
     <type fullname="DataPlayerStateBar" preserve="all" />
+    <type fullname="DataSavePoint" preserve="all" />
     <type fullname="DataScene" preserve="all" />
     <type fullname="DialogueSystem" preserve="all" />
     <type fullname="DrawBridge" preserve="all" />
@@ -91,6 +92,7 @@
     <type fullname="DATASCENE" preserve="nothing" serialized="true" />
     <type fullname="Sound" preserve="nothing" serialized="true" />
     <type fullname="DATAENEMY" preserve="nothing" serialized="true" />
+    <type fullname="DATASAVEPOINT" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Cinemachine.CinemachineBrain" preserve="all" />
