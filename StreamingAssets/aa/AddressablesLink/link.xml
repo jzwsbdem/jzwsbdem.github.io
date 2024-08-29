@@ -43,6 +43,7 @@
     <type fullname="Menu" preserve="all" />
     <type fullname="MenuAudioRandom" preserve="all" />
     <type fullname="MenuParallax" preserve="all" />
+    <type fullname="Mushroom" preserve="all" />
     <type fullname="Opening" preserve="all" />
     <type fullname="ParallaxBackground" preserve="all" />
     <type fullname="Particle" preserve="all" />
@@ -74,13 +75,16 @@
     <type fullname="SingleMainCanvas" preserve="all" />
     <type fullname="SinglePlayer" preserve="all" />
     <type fullname="SingleVirtualCamera" preserve="all" />
+    <type fullname="Skeleton" preserve="all" />
     <type fullname="Spring" preserve="all" />
     <type fullname="TargetManager" preserve="all" />
     <type fullname="TeleportPoint" preserve="all" />
     <type fullname="TotalEvent" preserve="all" />
     <type fullname="UIManager" preserve="all" />
     <type fullname="VoidEventSO" preserve="all" />
+    <type fullname="Werewolf" preserve="all" />
     <type fullname="Witch" preserve="all" />
+    <type fullname="Wolf" preserve="all" />
     <type fullname="YoyoMoveObject" preserve="all" />
     <type fullname="DATAPLAYERSTATE" preserve="nothing" serialized="true" />
     <type fullname="DATAPLAYERSTATEBAR" preserve="nothing" serialized="true" />
