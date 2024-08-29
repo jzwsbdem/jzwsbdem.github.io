@@ -10,6 +10,7 @@
     <type fullname="BossTitle" preserve="all" />
     <type fullname="Bullet" preserve="all" />
     <type fullname="CameraController" preserve="all" />
+    <type fullname="Cannoneer" preserve="all" />
     <type fullname="Character" preserve="all" />
     <type fullname="CharacterEventSO" preserve="all" />
     <type fullname="Chest" preserve="all" />
@@ -32,6 +33,7 @@
     <type fullname="FloatHeathBar" preserve="all" />
     <type fullname="GameOverMenu" preserve="all" />
     <type fullname="GameSceneSO" preserve="all" />
+    <type fullname="Goblin" preserve="all" />
     <type fullname="Gradient" preserve="all" />
     <type fullname="HurtAnimation" preserve="all" />
     <type fullname="ImageMove" preserve="all" />
