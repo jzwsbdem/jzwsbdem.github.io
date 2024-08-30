@@ -2,7 +2,6 @@
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Attack" preserve="all" />
     <type fullname="AttackFinish" preserve="all" />
-    <type fullname="AudioDefinition" preserve="all" />
     <type fullname="AudioManager" preserve="all" />
     <type fullname="BlackMask" preserve="all" />
     <type fullname="BossBar" preserve="all" />
@@ -13,7 +12,6 @@
     <type fullname="Cannoneer" preserve="all" />
     <type fullname="Character" preserve="all" />
     <type fullname="CharacterEventSO" preserve="all" />
-    <type fullname="Chest" preserve="all" />
     <type fullname="DamageText" preserve="all" />
     <type fullname="DataDefinition" preserve="all" />
     <type fullname="DataEnemy" preserve="all" />
@@ -23,22 +21,22 @@
     <type fullname="DataSavePoint" preserve="all" />
     <type fullname="DataScene" preserve="all" />
     <type fullname="DialogueSystem" preserve="all" />
-    <type fullname="DrawBridge" preserve="all" />
     <type fullname="DropHealthBar" preserve="all" />
     <type fullname="EnemyPath" preserve="all" />
     <type fullname="FadeCanvas" preserve="all" />
     <type fullname="FadeEventSO" preserve="all" />
-    <type fullname="FallPlatform" preserve="all" />
     <type fullname="FileSavedText" preserve="all" />
     <type fullname="FloatEventSO" preserve="all" />
     <type fullname="FloatHeathBar" preserve="all" />
     <type fullname="GameOverMenu" preserve="all" />
     <type fullname="GameSceneSO" preserve="all" />
+    <type fullname="GetLogoImage" preserve="all" />
     <type fullname="Goblin" preserve="all" />
     <type fullname="Gradient" preserve="all" />
     <type fullname="HurtAnimation" preserve="all" />
     <type fullname="ImageMove" preserve="all" />
     <type fullname="InformationPanel" preserve="all" />
+    <type fullname="InitialLoad" preserve="all" />
     <type fullname="LevelManager" preserve="all" />
     <type fullname="LoadingText" preserve="all" />
     <type fullname="Menu" preserve="all" />
@@ -50,7 +48,6 @@
     <type fullname="Particle" preserve="all" />
     <type fullname="PauseMenu" preserve="all" />
     <type fullname="PhysicsCheck" preserve="all" />
-    <type fullname="PlayAudioEventSO" preserve="all" />
     <type fullname="PlayerAnimation" preserve="all" />
     <type fullname="PlayerController" preserve="all" />
     <type fullname="PlayerStateBar" preserve="all" />
@@ -77,7 +74,6 @@
     <type fullname="SinglePlayer" preserve="all" />
     <type fullname="SingleVirtualCamera" preserve="all" />
     <type fullname="Skeleton" preserve="all" />
-    <type fullname="Spring" preserve="all" />
     <type fullname="TargetManager" preserve="all" />
     <type fullname="TeleportPoint" preserve="all" />
     <type fullname="TotalEvent" preserve="all" />
@@ -87,12 +83,12 @@
     <type fullname="Witch" preserve="all" />
     <type fullname="Wolf" preserve="all" />
     <type fullname="YoyoMoveObject" preserve="all" />
+    <type fullname="DATAENEMY" preserve="nothing" serialized="true" />
+    <type fullname="DATASAVEPOINT" preserve="nothing" serialized="true" />
     <type fullname="DATAPLAYERSTATE" preserve="nothing" serialized="true" />
     <type fullname="DATAPLAYERSTATEBAR" preserve="nothing" serialized="true" />
     <type fullname="DATASCENE" preserve="nothing" serialized="true" />
     <type fullname="Sound" preserve="nothing" serialized="true" />
-    <type fullname="DATAENEMY" preserve="nothing" serialized="true" />
-    <type fullname="DATASAVEPOINT" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Cinemachine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Cinemachine.CinemachineBrain" preserve="all" />
@@ -113,9 +109,7 @@
     <type fullname="Cinemachine.LensSettings" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.2D.Tilemap.Extras, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="UnityEngine.RuleTile" preserve="all" />
     <type fullname="UnityEngine.Tilemaps.AnimatedTile" preserve="all" />
-    <type fullname="UnityEngine.RuleTile/TilingRule" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
@@ -201,10 +195,8 @@
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.LightmapSettings" preserve="all" />
     <type fullname="UnityEngine.Material" preserve="all" />
-    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
     <type fullname="UnityEngine.Object" preserve="all" />
     <type fullname="UnityEngine.RectTransform" preserve="all" />
-    <type fullname="UnityEngine.Rendering.SortingGroup" preserve="all" />
     <type fullname="UnityEngine.RenderSettings" preserve="all" />
     <type fullname="UnityEngine.RenderTexture" preserve="all" />
     <type fullname="UnityEngine.Shader" preserve="all" />
@@ -217,9 +209,9 @@
     <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.UnityEvent`1[Character]" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.Transform]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[EnemyController]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.Transform]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1[Character]" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Grid" preserve="all" />
@@ -236,9 +228,6 @@
     <type fullname="UnityEngine.PhysicsMaterial2D" preserve="all" />
     <type fullname="UnityEngine.PolygonCollider2D" preserve="all" />
     <type fullname="UnityEngine.Rigidbody2D" preserve="all" />
-  </assembly>
-  <assembly fullname="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="UnityEngine.BoxCollider" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Font" preserve="all" />
@@ -271,6 +260,7 @@
   </assembly>
   <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.CanvasGroup" preserve="all" />
     <type fullname="UnityEngine.CanvasRenderer" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.TextCoreFontEngineModule">
