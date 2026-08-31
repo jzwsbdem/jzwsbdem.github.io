@@ -1,0 +1,57 @@
+/* #region FONT */
+@font-face {
+  font-family: 'Chaney';
+  src: url('../fonts/ Normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url('../fonts/Book Antiqua.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '宋体';
+  src: url('../fonts/SongTi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JMH Typewriter';
+  src: url('../fonts/JMH Typewriter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yu Mincho';
+  src: url('../fonts/Yu Mincho.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PC-9800-Bold';
+  src: url('../fonts/PC-9800-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PC-9800';
+  src: url('../fonts/PC-9800.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* #endregion */

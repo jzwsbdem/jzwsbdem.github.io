@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Reader</title>
+    <link rel="stylesheet" href="../../styles/PDFReader.css">
+</head>
+<body>
+
+    <!-- ===== 工具栏 ===== -->
+    <div class="toolbar" id="toolbar">
+        <button id="prevPage" disabled>◀ Prev</button>
+        <span class="page-info" id="pageInfo">0 / 0</span>
+        <button id="nextPage" disabled>Next ▶</button>
+
+        <span class="file-name" id="fileName">Loading...</span>
+    </div>
+
+    <!-- ===== PDF 渲染容器 ===== -->
+    <div class="pdf-container" id="pdfContainer">
+        <div class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <div>Loading...</div>
+        </div>
+        <canvas id="pdfCanvas" style="display:none;"></canvas>
+    </div>
+
+    <!-- ===== 引入 PDF.js ===== -->
+    <script type="importmap">
+    {
+        "imports": {
+            "pdfjs-dist": "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/+esm",
+            "pdfjs-dist/": "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/"
+        }
+    }
+    </script>
+
+    <script type="module" src="../../scripts/PDFReader.js"></script>
+
+</body>
+</html>
