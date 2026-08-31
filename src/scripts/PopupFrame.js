@@ -212,7 +212,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     openTrigger: openTrigger,
                 });
             }
-        } catch (e) {
+        } catch (error) {
+            console.error(`Initializing ${index + 1} popup failed: ${error.message}`);
         }
     });
 });

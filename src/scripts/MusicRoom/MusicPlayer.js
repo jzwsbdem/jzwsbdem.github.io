@@ -65,7 +65,7 @@
   // ============================================================
   async function loadData() {
     try {
-      const response = await fetch('../../datas/MusicRoomData.json');
+      const response = await fetch('/datas/MusicRoomData.json');
       if (!response.ok) {
         return;
       }
@@ -79,7 +79,7 @@
       
       init();
     } catch (error) {
-      // 静默处理
+      console.error('Failed to load data:', error);
     }
   }
 

@@ -1,0 +1,34 @@
+{
+  "name": "jzwsbdem.github.io",
+  "description": "",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "init": "lefthook install",
+    "dev": "parcel serve \"src/pages/**\" --watch-dir src --no-cache",
+    "build": "parcel build \"src/pages/**\" --no-scope-hoist",
+    "fix": "biome check --write"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.3.5",
+    "parcel-resolver-ignore": "^2.2.1",
+    "parcel": "^2.16.4",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "three": "^0.185.1"
+  },
+  "targets": {
+    "default": {
+      "context": "browser",
+      "optimize": true
+    }
+  },
+  "staticFiles": {
+    "staticPath": "public"
+  },
+  "parcelIgnore": [
+    "archive/",
+    "archive/"
+  ]
+}

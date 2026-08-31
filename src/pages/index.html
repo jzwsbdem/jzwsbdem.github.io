@@ -3,13 +3,13 @@
 
 <head>
     <!-- ===== 竖屏CSS（手机竖屏） ===== -->
-    <link rel="stylesheet" href="./styles/MainMobile.css" media="(max-aspect-ratio: 1/1)">
-    
-    <!-- ===== 横屏CSS（电脑/横屏） ===== -->
-    <link rel="stylesheet" href="./styles/MainDesktop.css" media="(min-aspect-ratio: 1/1)">
+    <link rel="stylesheet" href="../styles/MainMobile.css" media="(max-aspect-ratio: 1/1)">
 
-    <link rel="stylesheet" type="text/css" href="./styles/Font.css"/>
-    <link rel="stylesheet" href="./styles/PopupFrame.css">
+    <!-- ===== 横屏CSS（电脑/横屏） ===== -->
+    <link rel="stylesheet" href="../styles/MainDesktop.css" media="(min-aspect-ratio: 1/1)">
+
+    <link rel="stylesheet" type="text/css" href="../styles/Font.css" />
+    <link rel="stylesheet" href="../styles/PopupFrame.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Republic of Narcissus</title>
@@ -39,12 +39,12 @@
             <h2 class="leftTextTitle">☆ 水仙導航 ☆</h2>
             <div class="leftInnerFrame">
                 <div class="character"></div>
-                <a href="./pages/MusicRoom/MusicRoom.html" class="leftButton1">MUSIC ROOM</a>
-                <a href="./pages/LuminousKnight/index.html" class="leftButton1">個人開發遊戲</a>
-                <a href="./pages/404/404.html" class="leftButton1">水仙設定</a>
+                <a href="./MusicRoom.html" class="leftButton1">MUSIC ROOM</a>
+                <!-- <a href="./LuminousKnight/index.html" class="leftButton1">個人開發遊戲</a> TODO: -->
+                <a href="./404.html" class="leftButton1">水仙設定</a>
                 <div id="perButton" class="leftButton1">個人資訊</div>
                 <div id="arcButton" class="leftButton1">檔案館</div>
-                <a href="./pages/404/404.html" class="leftButton1">畫廊</a>
+                <a href="./404.html" class="leftButton1">畫廊</a>
                 <div id="friButton" class="leftButton1">友情鏈接</div>
                 <div id="misButton" class="leftButton1">雜項</div>
             </div>
@@ -57,12 +57,12 @@
                 <div id="launchDateText2"></div>
                 <div id="visitorCountText"></div>
                 <div class="timeDisplay" id="timeDisplay">
-                當前TIME: <span id="hours">00</span>: 
-                <span id="minutes">00</span>: 
-                <span class="seconds" id="seconds">00</span>
+                    當前TIME: <span id="hours">00</span>:
+                    <span id="minutes">00</span>:
+                    <span class="seconds" id="seconds">00</span>
                 </div>
                 <div class="dateDisplay" id="dateDisplay"></div>
-                <a href="./pages/ObserverSpirit/ObserverSpirit.html" class="leftButton1">MUSIC ROOM</a>
+                <a href="./ObserverSpirit.html" class="leftButton1">MUSIC ROOM</a>
             </div>
         </div>
 
@@ -98,11 +98,12 @@
             <div class="popup-inner">
                 <button class="popup-close-btn" data-close>✕</button>
                 <h2 class="popup-title">☆ 友情鏈接 ☆</h2>
-                <h2 class="popup-footer">* 水仙花共和國歡迎一切盟友的到來 *<br>* 交換友鏈者, 請致電「個人資訊」中第一個電郵, 並附上「Narcissus」字樣, 最後請提供網址及名字 *</h2>
+                <h2 class="popup-footer">* 水仙花共和國歡迎一切盟友的到來 *<br>* 交換友鏈者, 請致電「個人資訊」中第一個電郵, 並附上「Narcissus」字樣, 最後請提供網址及名字 *
+                </h2>
                 <a href="https://i.arimuraromi.com/" class="innerButton">👋 Hi there | biyuehu</a>
                 <a href="https://rinka.asia" class="innerButton">鏡中燐光 - Mirror Phosphor+</a>
                 <a href="https://tholoco.github.io" class="innerButton">TOLOC HOME</a>
-                </div>
+            </div>
         </div>
 
         <!-- ======== MISCELLANEOUS ======== -->
@@ -111,7 +112,7 @@
                 <button class="popup-close-btn" data-close>✕</button>
                 <h2 class="popup-title">☆ 雜項 ☆</h2>
                 <h2 class="popup-footer">* 有趣的小玩意兒 不會感到無聊哦 *</h2>
-                <a href="./pages/Miscellaneous/Rheostat.html" class="innerButton">滑動坑阻器 (POWERED BY TOLOC)</a>
+                <!-- <a href="./Rheostat.html" class="innerButton">滑動坑阻器 (POWERED BY TOLOC)</a> TODO: -->
             </div>
         </div>
 
@@ -139,8 +140,8 @@
             <div class="popup-inner">
                 <button class="popup-close-btn" data-close>✕</button>
                 <h2 class="popup-title">☆ 檔案館 ☆</h2>
-                <a href="./pages/Archives/ArchivesYin.html" class="innerButton">資料參聞館 OF KIRSI [銀]</a>
-                <a href="./pages/Archives/Ourcraft/index.html" class="innerButton">OURCRAFT 簡史</a>
+                <!-- <a href="./Archives/ArchivesYin.html" class="innerButton">資料參聞館 OF KIRSI [銀]</a>
+                <a href="./Archives/Ourcraft/index.html" class="innerButton">OURCRAFT 簡史</a> TODO: -->
             </div>
         </div>
     </div>
@@ -149,10 +150,11 @@
         <div class="tecText">技術支援:<a href="https://github.com/biyuehu" class="tecInnerText"> Arimura Sena</a></div>
     </div>
 
-    <script src="./scripts/RandomDecBG.js"></script>
-    <script src="./scripts/RandomMainBG.js"></script>
-    <script src="./scripts/WebsiteInformation.js"></script>
-    <script src="./scripts/PopupFrame.js"></script>
-    <script src="./scripts/Adaptation.js"></script>
+    <script src="../scripts/RandomDecBG.js"></script>
+    <script src="../scripts/RandomMainBG.js"></script>
+    <script src="../scripts/WebsiteInformation.js"></script>
+    <script src="../scripts/PopupFrame.js"></script>
+    <script src="../scripts/Adaptation.js"></script>
 </body>
+
 </html>

@@ -104,8 +104,9 @@ const SITE_SLUG = 'republic-of-narcissus.icu';
         const res = await fetch(url);
         const data = await res.json();
         el.textContent = `總訪問數: ${data.count}` || `總訪問數: 0`;
-    } catch {
+    } catch(error) {
         el.textContent = 'LOADING';
+        console.error('Error fetching visitor count:', error);
     }
 })();
 // #endregion
