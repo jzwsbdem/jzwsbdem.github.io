@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "author": "jzwsbdem",
   "scripts": {
-    "init": "lefthook install",
     "dev": "parcel serve \"src/pages/**\" --watch-dir src --no-cache",
-    "build": "parcel build \"src/pages/**\" --no-scope-hoist",
-    "fix": "biome check --write"
+    "build": "parcel build \"src/pages/**\" --no-scope-hoist --no-source-maps",
+    "preview": "bun x vite preview"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -28,7 +28,11 @@
     "staticPath": "public"
   },
   "parcelIgnore": [
-    "archive/",
-    "archive/"
-  ]
+    "/Archives",
+    "/LuminousKnight",
+    "/Miscellaneous"
+  ],
+  "dependencies": {
+    "pdfjs-dist": "^6.3.289"
+  }
 }

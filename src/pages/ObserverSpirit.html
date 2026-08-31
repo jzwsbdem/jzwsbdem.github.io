@@ -4,11 +4,11 @@
 <head>
     <!-- ===== 竖屏CSS（手机竖屏） ===== -->
     <link rel="stylesheet" href="../styles/ObserverSpiritMobile.css" media="(max-aspect-ratio: 1/1)">
-    
+
     <!-- ===== 横屏CSS（电脑/横屏） ===== -->
     <link rel="stylesheet" href="../styles/ObserverSpiritDesktop.css" media="(min-aspect-ratio: 1/1)">
 
-    <link rel="stylesheet" type="text/css" href="../styles/Font.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/Font.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yin's Observer Spirit</title>
@@ -42,26 +42,26 @@
         </div>
         <div class="frameMusic">
             <div class="player">
-            <span class="status-text">PLAYING</span>
-            <div class="now-playing" id="nowPlayingLabel"></div>
-            <div class="custom-audio">
-                <button class="play-btn" id="playBtn" aria-label="播放/暂停">▶</button>
-                <div class="progress-container">
-                <div class="progress-bar" id="progressBar">
-                    <div class="progress-fill" id="progressFill"></div>
+                <span class="status-text">PLAYING</span>
+                <div class="now-playing" id="nowPlayingLabel"></div>
+                <div class="custom-audio">
+                    <button class="play-btn" id="playBtn" aria-label="播放/暂停">▶</button>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+                    </div>
+                    <div class="volume-container">
+                        <span class="volume-icon" id="volumeIcon">🔊</span>
+                        <div class="volume-bar" id="volumeBar">
+                            <div class="volume-fill" id="volumeFill"></div>
+                        </div>
+                    </div>
                 </div>
-                <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
-                </div>
-                <div class="volume-container">
-                <span class="volume-icon" id="volumeIcon">🔊</span>
-                <div class="volume-bar" id="volumeBar">
-                    <div class="volume-fill" id="volumeFill"></div>
-                </div>
-                </div>
-            </div>
-            <div class="track-list" id="trackListContainer"></div>
-            <audio id="audioPlayer" preload="metadata"></audio>
-            <div id="errorDisplay" class="error-msg"></div>
+                <div class="track-list" id="trackListContainer"></div>
+                <audio id="audioPlayer" preload="metadata"></audio>
+                <div id="errorDisplay" class="error-msg"></div>
             </div>
         </div>
         <div id="frameSystemConsole">
@@ -108,4 +108,5 @@
     <script src="../scripts/ObserverSpirit/SystemConsoleOS.js"></script>
     <script src="../scripts/ObserverSpirit/WorldClockOS.js"></script>
 </body>
+
 </html>

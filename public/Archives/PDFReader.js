@@ -9,128 +9,128 @@ import * as pdfjsLib from 'pdfjs-dist';
 const PDF_DOCS = {
     doc1: {
         name: '1',
-        path: 'YinDoujinshi/1.pdf',
+        path: '/Archives/YinDoujinshi/1.pdf',
     },
     doc2: {
         name: '2',
-        path: 'YinDoujinshi/2.pdf',
+        path: '/Archives/YinDoujinshi/2.pdf',
     },
     doc3: {
         name: '3',
-        path: 'YinDoujinshi/3.pdf',
+        path: '/Archives/YinDoujinshi/3.pdf',
     },
     doc4: {
         name: '4',
-        path: 'YinDoujinshi/4.pdf',
+        path: '/Archives/YinDoujinshi/4.pdf',
     },
     doc5: {
         name: '5',
-        path: 'YinDoujinshi/5.pdf',
+        path: '/Archives/YinDoujinshi/5.pdf',
     },
     doc6: {
         name: '6',
-        path: 'YinDoujinshi/6).pdf',
+        path: '/Archives/YinDoujinshi/6).pdf',
     },
     doc7: {
         name: '7',
-        path: 'YinDoujinshi/7.pdf',
+        path: '/Archives/YinDoujinshi/7.pdf',
     },
     doc8: {
         name: '8',
-        path: 'YinDoujinshi/8.pdf',
+        path: '/Archives/YinDoujinshi/8.pdf',
     },
     doc9: {
         name: '9',
-        path: 'YinDoujinshi/9.pdf',
+        path: '/Archives/YinDoujinshi/9.pdf',
     },
     doc10: {
         name: '10',
-        path: 'YinDoujinshi/10.pdf',
+        path: '/Archives/YinDoujinshi/10.pdf',
     },
     doc11: {
         name: '11',
-        path: 'YinDoujinshi/11.pdf',
+        path: '/Archives/YinDoujinshi/11.pdf',
     },
     doc12: {
         name: '12',
-        path: 'YinDoujinshi/12.pdf',
+        path: '/Archives/YinDoujinshi/12.pdf',
     },
     doc13: {
         name: '13',
-        path: 'YinDoujinshi/13.pdf',
+        path: '/Archives/YinDoujinshi/13.pdf',
     },
     doc14: {
         name: '14',
-        path: 'YinDoujinshi/14.pdf',
+        path: '/Archives/YinDoujinshi/14.pdf',
     },
     doc15: {
         name: '15',
-        path: 'YinDoujinshi/15.pdf',
+        path: '/Archives/YinDoujinshi/15.pdf',
     },
     doc16: {
         name: '16',
-        path: 'YinDoujinshi/16.pdf',
+        path: '/Archives/YinDoujinshi/16.pdf',
     },
     doc17: {
         name: '17',
-        path: 'YinDoujinshi/17.pdf',
+        path: '/Archives/YinDoujinshi/17.pdf',
     },
     doc18: {
         name: '18',
-        path: 'YinDoujinshi/18.pdf',
+        path: '/Archives/YinDoujinshi/18.pdf',
     },
     doc19: {
         name: '19',
-        path: 'YinDoujinshi/19.pdf',
+        path: '/Archives/YinDoujinshi/19.pdf',
     },
     doc20: {
         name: '20',
-        path: 'YinDoujinshi/20.pdf',
+        path: '/Archives/YinDoujinshi/20.pdf',
     },
     doc21: {
         name: '21',
-        path: 'YinDoujinshi/21.pdf',
+        path: '/Archives/YinDoujinshi/21.pdf',
     },
 
     doc22: {
         name: '22',
-        path: 'YinDoujinshi/22.pdf',
+        path: '/Archives/YinDoujinshi/22.pdf',
     },
     doc23: {
         name: '23',
-        path: 'YinDoujinshi/23.pdf',
+        path: '/Archives/YinDoujinshi/23.pdf',
     },
     doc24: {
         name: '24',
-        path: 'YinDoujinshi/24.pdf',
+        path: '/Archives/YinDoujinshi/24.pdf',
     },
     doc25: {
         name: '25',
-        path: 'YinDoujinshi/25.pdf',
+        path: '/Archives/YinDoujinshi/25.pdf',
     },
     doc26: {
         name: '26',
-        path: 'YinDoujinshi/26.pdf',
+        path: '/Archives/YinDoujinshi/26.pdf',
     },
     doc27: {
         name: '27',
-        path: 'YinDoujinshi/27.pdf',
+        path: '/Archives/YinDoujinshi/27.pdf',
     },
     doc28: {
         name: '28',
-        path: 'YinDoujinshi/28.pdf',
+        path: '/Archives/YinDoujinshi/28.pdf',
     },
     doc29: {
         name: '29',
-        path: 'YinDoujinshi/29.pdf',
+        path: '/Archives/YinDoujinshi/29.pdf',
     },
     doc30: {
         name: '30',
-        path: 'YinDoujinshi/30.pdf',
+        path: '/Archives/YinDoujinshi/30.pdf',
     },
     doc31: {
         name: '31',
-        path: 'YinDoujinshi/31.pdf',
+        path: '/Archives/YinDoujinshi/31.pdf',
     },
 };
 
