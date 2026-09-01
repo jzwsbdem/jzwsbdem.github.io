@@ -1,0 +1,49 @@
+/* #region BASE */
+html {
+  background-color: #191970;
+}
+
+body {
+    overflow: hidden;   
+    transform-origin: top center;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;   
+    min-height: 100vh;
+    scale: 1.1;
+}
+/* #endregion */
+
+/* #region FRAME */
+.mainFrame {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 1px solid purple; 
+  background-image: url(../images/background/11.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  margin: 0 auto;
+}
+/* #endregion */
+
+/* #region TEXT */
+.mainTitle {
+  margin: 0;
+  color: white;
+  font-size: 40px; 
+  font-weight: normal;
+  text-align: center;
+}
+
+.subTitle {
+  margin: 3;
+  color: grey;
+  font-size: 17.5px; 
+  font-weight: normal;
+  text-align: center;
+}
+/* #endregion */
+
+
+
