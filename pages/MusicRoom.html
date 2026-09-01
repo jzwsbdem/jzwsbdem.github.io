@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles/Font.css"/>
+    <link rel="stylesheet" href="../styles/PopupFrame.css">
+    <link rel="stylesheet" href="../styles/MusicRoom.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Room Rack</title>
+</head>
+
+<body>
+    <div class="outerInfFrame">
+        <h1 class="mainTitle">Music Room Rack ver. 0.1</h1>
+    </div>
+
+    <div class="mainFrame">
+
+        <div class="leftFrame">
+            <div class="albumHeader">
+                <button class="album-nav-btn" id="prevAlbumBtn" >
+                    <img src="../images/sprite/leftButton.png" alt="prev" class="buutonIcon">
+                </button>
+                <button class="album-nav-btn" id="nextAlbumBtn">
+                    <img src="../images/sprite/rightButton.png" alt="next" class="buutonIcon">
+                </button>
+            </div>
+            <div id="albButton" class="albumTitle"></div>
+            <div class="musicListFrame">
+                <div class="player">
+                    <div class="custom-audio">
+                        <button class="play-btn" id="playBtn" aria-label="播放/暂停">▶</button>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="time-display" id="timeDisplay">0:00 / 0:00</span>
+                        </div>
+                        <div class="volume-container">
+                            <span class="volume-icon" id="volumeIcon">🔊</span>
+                            <div class="volume-bar" id="volumeBar">
+                                <div class="volume-fill" id="volumeFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="track-list" id="trackListContainer"></div>
+                    <audio audio id="audioPlayer" preload="metadata"></audio>
+                    <div id="errorDisplay" class="error-msg"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightFrame">
+            <div class="cornerInformation">Original by ZUN<br>Rack by JZWSBDEM</div>
+            <div id="rightTitle"></div>
+            <div id="pianoContainer"></div>
+        </div>
+
+        <canvas id="shapeCanvas"></canvas>
+
+        <!-- ======== ALBUMS ======== -->
+        <div id="albums" class="popup-overlay">
+            <div class="popup-inner">
+                <button class="popup-close-btn" data-close>✕</button>
+                <h2 class="popup-title">☆ 外置專輯選擇 ☆</h2>
+                <h2 class="popup-footer">* Music Room Rack ver. 0.1 *</h2>
+                <a href="javascript:void(0)" class="innerButton" data-playlist="0">酸化スカンジウム - Scandium Oxide</a>
+                <a href="javascript:void(0)" class="innerButton" data-playlist="1">塩化スカンジウム EP - Scandium Chloride</a>
+                <a href="javascript:void(0)" class="innerButton" data-playlist="2">鎮魂醒霊曲 EP</a>
+                <a href="javascript:void(0)" class="innerButton" data-playlist="3">镇魂醒霊曲 EP (Instrumental Version)</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/MusicRoom/MusicPlayer.js"></script>
+    <script src="../scripts/MusicRoom/RandomShapeBG.js"></script>
+    <script src="../scripts/MusicRoom/MIDIPlayer.js"></script>
+    <script src="../scripts/PopupFrame.js"></script>
+</body>
+</html>

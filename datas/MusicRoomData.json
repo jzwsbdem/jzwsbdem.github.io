@@ -1,0 +1,198 @@
+{
+  "playlists": {
+    "0": [
+      { 
+        "name": "Intro –トリス[シクロペンタジエニル]スカンジウム–", 
+        "id": 3421272527, 
+        "midi": "../datas/MIDI/ScandiumOxide/Intro.mid" 
+      },
+      { 
+        "name": "オブリビオン –Unohdettu Melodia–", 
+        "id": 3421360517, 
+        "midi": "../datas/MIDI/ScandiumOxide/Oblivion.mid" 
+      },
+      { 
+        "name": "幻想郷 –送別会–", 
+        "id": 3421362769, 
+        "midi": "../datas/MIDI/ScandiumOxide/Gensoukyou.mid" 
+      },
+      { 
+        "name": "ハートビート –心が動く女の子に出会った–", 
+        "id": 3421363459, 
+        "midi": "../datas/MIDI/ScandiumOxide/Heartbeat.mid" 
+      },
+      { 
+        "name": "Jzws –ラプソディー–", 
+        "id": 3421363973, 
+        "midi": "../datas/MIDI/ScandiumOxide/Jzws.mid" 
+      },
+      { 
+        "name": "Sirius –Matka Ulkoiselle Planeetalle–", 
+        "id": 3421363585, 
+        "midi": "../datas/MIDI/ScandiumOxide/Sirius.mid" 
+      },
+      { 
+        "name": "Rain –Kävellä Sateessa–", 
+        "id": 3421363619, 
+        "midi": "../datas/MIDI/ScandiumOxide/Rain.mid" 
+      },
+      { 
+        "name": "Cccxl –Koe [Failure]–", 
+        "id": 3421363685, 
+        "midi": "../datas/MIDI/ScandiumOxide/Cccxl.mid" 
+      },
+      { 
+        "name": "気が狂う –Juoksiva Septetti–", 
+        "id": 3421363780, 
+        "midi": "../datas/MIDI/ScandiumOxide/Kigakuruu.mid" 
+      },
+      { 
+        "name": "Outro –Fantasia On Hävinnyt–", 
+        "id": 3421364805, 
+        "midi": "../datas/MIDI/ScandiumOxide/Outro.mid" 
+      },
+      { 
+        "name": "Intro II", 
+        "id": 3421429055, 
+        "midi": "../datas/MIDI/ScandiumOxide/Intro.mid" 
+      },
+      { 
+        "name": "オブリビオン II", 
+        "id": 3421428415, 
+        "midi": "../datas/MIDI/ScandiumOxide/Oblivion.mid" 
+      },
+      { 
+        "name": "幻想郷 II", 
+        "id": 3421428454, 
+        "midi": "../datas/MIDI/ScandiumOxide/Gensoukyou.mid" 
+      },
+      { 
+        "name": "ハートビート II", 
+        "id": 3421429178, 
+        "midi": "../datas/MIDI/ScandiumOxide/Heartbeat.mid" 
+      },
+      { 
+        "name": "Jzws II", 
+        "id": 3421428608, 
+        "midi": "../datas/MIDI/ScandiumOxide/Jzws.mid" 
+      },
+      { 
+        "name": "Sirius II", 
+        "id": 3421429285, 
+        "midi": "../datas/MIDI/ScandiumOxide/Sirius.mid" 
+      },
+      { 
+        "name": "Rain II", 
+        "id": 3421429310, 
+        "midi": "../datas/MIDI/ScandiumOxide/Rain.mid" 
+      },
+      { 
+        "name": "Cccxl II", 
+        "id": 3421428739, 
+        "midi": "../datas/MIDI/ScandiumOxide/Cccxl.mid" 
+      },
+      { 
+        "name": "気が狂う II", 
+        "id": 3421428771, 
+        "midi": "../datas/MIDI/ScandiumOxide/Kigakuruu.mid" 
+      },
+      { 
+        "name": "Outro II", 
+        "id": 3421429450, 
+        "midi": "../datas/MIDI/ScandiumOxide/Outro.mid" 
+      }
+    ],
+    "1": [
+      { 
+        "name": "イリュージョンズリターン", 
+        "id": 3334170535, 
+        "midi": "../datas/MIDI/ScandiumChloride/イリュージョンズリターン.mid" 
+      },
+      { 
+        "name": "幻覚ノ庭園", 
+        "id": 3334170690, 
+        "midi": "../datas/MIDI/ScandiumChloride/幻覚ノ庭園.mid" 
+      },
+      { 
+        "name": "動かない魂と漂う人", 
+        "id": 3335430849, 
+        "midi": "../datas/MIDI/ScandiumChloride/動かない魂と漂う人.mid" 
+      },
+      { 
+        "name": "灯台の謎めいた少女", 
+        "id": 3356784995, 
+        "midi": "../datas/MIDI/ScandiumChloride/灯台の謎めいた少女.mid" 
+      },
+      { 
+        "name": "不思議の国のコーイアックス", 
+        "id": 3361037292, 
+        "midi": "../datas/MIDI/ScandiumChloride/不思議の国のコーイアックス.mid" 
+      }
+    ],
+    "2": [
+      { 
+        "name": "Intro", 
+        "id": 3358146291, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Execution.mid" 
+      },
+      { 
+        "name": "レイコン・エクセキューション", 
+        "id": 3342427839, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Execution.mid" 
+      },
+      { 
+        "name": "白鳥湖の孤独な少女", 
+        "id": 3371557084, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Hakucho.mid" 
+      },
+      { 
+        "name": "ブロイラー式精神二重性修正", 
+        "id": 3392144415, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Bleuler.mid" 
+      },
+      { 
+        "name": "ACID RAIN", 
+        "id": 3405088632, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/AcidRain.mid" 
+      },
+      { 
+        "name": "Vita et Follia", 
+        "id": 3411539463, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/VitaetFollia.mid" 
+      }
+    ],
+    "3": [
+      { 
+        "name": "Reikon Execution - Instrumental", 
+        "id": 3412801003, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Execution.mid" 
+      },
+      { 
+        "name": "白鳥湖の孤独な少女 - Instrumental", 
+        "id": 3413065949, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Hakucho.mid" 
+      },
+      { 
+        "name": "ブロイラー式精神二重性修正 - Instrumental", 
+        "id": 3413068846, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/Bleuler.mid" 
+      },
+      { 
+        "name": "ACID RAIN - Instrumental", 
+        "id": 3413068731, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/AcidRain.mid" 
+      },
+      { 
+        "name": "Vita et Follia - Instrumental", 
+        "id": 3413069659, 
+        "midi": "../datas/MIDI/ChinkonSeireiKyoko/VitaetFollia.mid" 
+      }
+    ]
+  },
+  "albumTitleMap": {
+    "0": "酸化スカンジウム - ScandiumOxide",
+    "1": "塩化スカンジウム EP - Scandium Chloride",
+    "2": "鎮魂醒霊曲 EP",
+    "3": "镇魂醒霊曲 EP (Instrumental Version)"
+  }
+}
