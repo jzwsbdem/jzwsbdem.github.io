@@ -18,7 +18,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('../images/background/13.jpg');
+    background-image: url('/assets/images/background/13.jpg');
     background-size: 100% 100%;
 }
 /* #endregion */

@@ -73,7 +73,7 @@ body {
 }
 
 .character   {
-  background-image: url('../images/decoration/expression/vodyanitsa1.gif');
+  background-image: url('/assets/images/decoration/expression/vodyanitsa1.gif');
   position: absolute;
   width: 240px;
   height: 240px;
@@ -89,7 +89,7 @@ body {
   width: 500px;
   height: calc(375px - 1px);
   background-size: 100% 100%;
-  background-image: url('../images/decoration/background/1.gif');
+  background-image: url('/assets/images/decoration/background/1.gif');
   background-repeat: no-repeat;
   display: block;
   margin: 0 auto;

@@ -414,7 +414,7 @@ function drawFixedAvatar() {
 }
 drawFixedAvatar();
 const loader = new THREE.TextureLoader();
-const photoTexture = loader.load('./images/president.png');
+const photoTexture = loader.load('/assets/president/president.png');
 photoTexture.colorSpace = THREE.SRGBColorSpace;
 const matPhoto = new THREE.MeshStandardMaterial({ map: photoTexture, roughness: 0.3, metalness: 0.05 });
 const photoDisc = new THREE.Mesh(new THREE.CircleGeometry(0.32, 48), matPhoto);

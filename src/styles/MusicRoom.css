@@ -13,7 +13,7 @@ html {
 body {
     overflow-x: hidden;
     overflow-y: auto;
-    background-image: url(../images/background/16.png);
+    background-image: url('/assets/images/background/16.png');
     transform-origin: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ body {
     height: 600px;
     border: 1px solid purple; 
     margin: 0 auto;
-    background-image: url('../images/background/15.png');
+    background-image: url('/assets/images/background/15.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -76,7 +76,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/background/17.png') center/contain no-repeat;
+  background: url('/assets/images/background/17.png') center/contain no-repeat;
   pointer-events: none;
 }
 

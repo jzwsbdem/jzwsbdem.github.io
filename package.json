@@ -30,7 +30,8 @@
   "parcelIgnore": [
     "/Archives",
     "/LuminousKnight",
-    "/Miscellaneous"
+    "/Miscellaneous",
+    "/assets"
   ],
   "dependencies": {
     "pdfjs-dist": "^6.3.289"
