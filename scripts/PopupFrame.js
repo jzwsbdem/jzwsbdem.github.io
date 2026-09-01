@@ -198,7 +198,8 @@ document.addEventListener('DOMContentLoaded', function() {
         ['#miscellaneous', '#misButton'],
         ['#personalInformation', '#perButton'],
         ['#archives', '#arcButton'],
-        ['#albums', '#albButton']
+        ['#albums', '#albButton'],
+        ['#storyPopup', '#storyTrigger']
     ];
 
     const popups = {};
@@ -215,4 +216,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (e) {
         }
     });
+    // ★★★ 暴露更新函数到全局 ★★★
+    window.updateStoryPopupContent = function() {};
 });

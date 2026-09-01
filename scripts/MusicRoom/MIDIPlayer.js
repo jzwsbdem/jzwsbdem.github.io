@@ -18,7 +18,7 @@
             const isBlack = blackPattern.includes(noteIndex);
             keys.push({
                 isBlack: isBlack,
-                midiNote: 36 + total,
+                midiNote: 24 + total,
             });
             total++;
             noteIndex = (noteIndex + 1) % 12;
@@ -31,8 +31,8 @@
     const pianoKeys = [];
 
     // ★★★ 回弹速度配置 ★★★
-    const KEY_HIGHLIGHT_DURATION = 120;   // 毫秒，原来 500ms
-    const KEY_HIGHLIGHT_DURATION_MIDI = 300; // MIDI 音符回弹速度，原来 dur * 1000 + 50
+    const KEY_HIGHLIGHT_DURATION = 120;
+    const KEY_HIGHLIGHT_DURATION_MIDI = 300;
 
     // ---------- 音频（静音模式） ----------
     let audioCtx = null;
@@ -50,10 +50,11 @@
     const MIDI_AHEAD = 0.25;
     let currentPercent = 0;
 
-    // 暴露暂停状态给外部
+    // 存储当前高亮的音符和对应的定时器
+    let activeHighlights = new Map(); // key: "pianoIndex-noteIndex", value: { timeoutId, startTime, duration }
+
     window.midiIsPaused = false;
 
-    // 静音的 AudioContext（不发出声音）
     function getAudioContext() {
         if (!audioCtx) {
             audioCtx = new(window.AudioContext || window.webkitAudioContext)();
@@ -61,18 +62,63 @@
         return audioCtx;
     }
 
-    // ★★★ 修改：不发声的播放函数，回弹更快 ★★★
+    // ============================================================
+    // ★★★ 核心修改：MIDI 音符按下和释放完全匹配音符时长 ★★★
+    // ============================================================
+
+    // 手动点击琴键（保持快速回弹）
     function playNote(midiNote, pianoIndex, velocity = 80) {
         highlightKey(pianoIndex, midiNote, true);
         setTimeout(() => {
             highlightKey(pianoIndex, midiNote, false);
-        }, KEY_HIGHLIGHT_DURATION);  // 使用快速回弹
+        }, KEY_HIGHLIGHT_DURATION);
+    }
+
+    // ★★★ MIDI 播放：按下音符，持续音符时长后释放 ★★★
+    function playMidiNote(track, t, dur, note, vel) {
+        const trackIdx = tracks.indexOf(track);
+        if (trackIdx >= 0 && trackIdx < PIANO_COUNT) {
+            const keys = pianoKeys[trackIdx];
+            if (!keys) return;
+            const noteIndex = note - 24;
+            if (noteIndex < 0 || noteIndex >= keys.length) return;
+
+            const key = keys[noteIndex];
+            const keyId = `${trackIdx}-${noteIndex}`;
+
+            // ★★★ 如果这个键已经有高亮，先清除旧的高亮 ★★★
+            if (activeHighlights.has(keyId)) {
+                const old = activeHighlights.get(keyId);
+                clearTimeout(old.timeoutId);
+                key.classList.remove('midi-active');
+                activeHighlights.delete(keyId);
+            }
+
+            // ★★★ 按下琴键（高亮） ★★★
+            key.classList.add('midi-active');
+
+            // ★★★ 计算实际持续时间（秒转毫秒，但至少保留50ms） ★★★
+            let durationMs = Math.max(50, dur * 1000);
+
+            // ★★★ 设置定时器，在音符持续时长后释放 ★★★
+            const timeoutId = setTimeout(() => {
+                key.classList.remove('midi-active');
+                activeHighlights.delete(keyId);
+            }, durationMs);
+
+            // 存储定时器信息
+            activeHighlights.set(keyId, {
+                timeoutId: timeoutId,
+                startTime: performance.now(),
+                duration: durationMs
+            });
+        }
     }
 
     function highlightKey(pianoIndex, midiNote, on) {
         const keys = pianoKeys[pianoIndex];
         if (!keys) return;
-        const noteIndex = midiNote - 36;
+        const noteIndex = midiNote - 24;
         if (noteIndex >= 0 && noteIndex < keys.length) {
             if (on) {
                 keys[noteIndex].classList.add('midi-active');
@@ -80,6 +126,28 @@
                 keys[noteIndex].classList.remove('midi-active');
             }
         }
+    }
+
+    // ============================================================
+    // ★★★ 新增：停止所有高亮（用于暂停/停止时清理）★★★
+    // ============================================================
+    function clearAllHighlights() {
+        // 清除所有定时器
+        for (const [keyId, data] of activeHighlights) {
+            clearTimeout(data.timeoutId);
+            // 移除高亮类
+            const [pianoIdx, noteIdx] = keyId.split('-').map(Number);
+            const keys = pianoKeys[pianoIdx];
+            if (keys && keys[noteIdx]) {
+                keys[noteIdx].classList.remove('midi-active');
+            }
+        }
+        activeHighlights.clear();
+        
+        // 额外的清理：移除所有 midi-active 类（保险）
+        document.querySelectorAll('.midi-active').forEach(el => {
+            el.classList.remove('midi-active');
+        });
     }
 
     // ---------- SMF MIDI 解析 ----------
@@ -238,18 +306,6 @@
 
     let tracks = [];
 
-    // ★★★ 修改：MIDI 音符回弹更快 ★★★
-    function playMidiNote(track, t, dur, note, vel) {
-        const trackIdx = tracks.indexOf(track);
-        if (trackIdx >= 0 && trackIdx < PIANO_COUNT) {
-            highlightKey(trackIdx, note, true);
-            // 使用快速回弹：固定 80ms，不再依赖 dur
-            setTimeout(() => { 
-                highlightKey(trackIdx, note, false); 
-            }, KEY_HIGHLIGHT_DURATION_MIDI);
-        }
-    }
-
     // ---------- MIDI 调度 ----------
     function midiCurTime() {
         if (!audioCtx) return midiAnchorSong;
@@ -288,6 +344,7 @@
                 const ev = ns[midiNext[i]++];
                 const abs = midiAnchorCtx + (ev[0] - midiAnchorSong);
                 if (abs >= now - 0.02) {
+                    // ★★★ 使用新的 playMidiNote，传入音符时长 ★★★
                     playMidiNote(tr, abs, ev[1], ev[2], ev[3]);
                 }
             }
@@ -298,6 +355,8 @@
             midiResetNext(0);
             midiAnchorCtx = audioCtx.currentTime;
             currentPercent = 0;
+            // ★★★ 播放结束，清理所有高亮 ★★★
+            clearAllHighlights();
         }
     }
 
@@ -307,16 +366,11 @@
         const ctx = getAudioContext();
         if (ctx.state === 'suspended') ctx.resume();
 
-        // ★★★ 关键修复：如果是暂停状态，从暂停位置恢复 ★★★
         if (isPaused) {
-            // 只改变状态，不重置任何位置
             isPaused = false;
             isPlaying = true;
             window.midiIsPaused = false;
-            // 更新锚点时间到当前
             midiAnchorCtx = ctx.currentTime;
-            // ★★★ 关键：不调用 midiResetNext，midiNext 已经在暂停时正确指向当前位置之后 ★★★
-            
             window.midiIsPlaying = true;
             const statusDisplay = document.getElementById('statusDisplay');
             if (statusDisplay) statusDisplay.textContent = '▶ Playing ...';
@@ -325,7 +379,6 @@
             return;
         }
 
-        // 从头开始播放（非暂停状态）
         isPlaying = true;
         isPaused = false;
         window.midiIsPaused = false;
@@ -341,11 +394,9 @@
 
     function midiPause() {
         if (!isPlaying) return;
-        // 暂停前记录当前位置
         isPlaying = false;
         isPaused = true;
         window.midiIsPaused = true;
-        // ★★★ 关键：记录暂停位置，但不重置 midiNext ★★★
         midiAnchorSong = midiCurTime();
         window.midiIsPlaying = false;
         if (midiTimer) { clearInterval(midiTimer);
@@ -362,7 +413,10 @@
         currentPercent = 0;
         if (midiTimer) { clearInterval(midiTimer);
             midiTimer = null; }
-        document.querySelectorAll('.midi-active').forEach(el => el.classList.remove('midi-active'));
+        
+        // ★★★ 停止时清理所有高亮 ★★★
+        clearAllHighlights();
+        
         const statusDisplay = document.getElementById('statusDisplay');
         if (statusDisplay) statusDisplay.textContent = '⏹ Stopped';
         window.midiIsPlaying = false;
@@ -552,7 +606,10 @@
         if (audioCtx) {
             midiAnchorCtx = audioCtx.currentTime;
         }
-        // 跳转时需要重置 midiNext
+        
+        // ★★★ 跳转时清理所有高亮 ★★★
+        clearAllHighlights();
+        
         midiResetNext(targetTime);
         document.querySelectorAll('.midi-active').forEach(el => el.classList.remove('midi-active'));
         
@@ -575,6 +632,9 @@
     window.midiGetProgress = function() {
         return currentPercent;
     };
+
+    // ★★★ 暴露清理函数 ★★★
+    window.clearAllHighlights = clearAllHighlights;
 
     function formatTime(seconds) {
         if (!seconds || isNaN(seconds) || !isFinite(seconds)) return '0:00';
