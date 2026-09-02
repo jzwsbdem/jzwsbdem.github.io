@@ -237,7 +237,6 @@ body {
 /* #endregion */
 
 /* #region TEXT */
-
 .mainTitle {
   margin: 0;
   color: yellow;
@@ -296,23 +295,6 @@ body {
   font-weight: normal;
 }
 
-.leftButton1 {
-  background: transparent;
-  border: 1px solid purple;
-  line-height: 22.5px;  
-  width: 120px;
-  height: 22.5px; 
-  color: yellow;
-  font-size: 15px; 
-  font-weight: normal;
-  text-align: left;
-  padding-left: 3px;
-}
-
-.leftButton1:hover {
-  color: darkred;
-}
-
 .rightTextTitle {
   text-decoration: underline;
   line-height: 1;
@@ -359,7 +341,6 @@ body {
 
 }
 
-
 .bottomText1 {
   line-height: 0;
   color: yellow;
@@ -396,7 +377,70 @@ body {
 .tecInnerText:hover {
   color: darkred;
 }
+
+.titleOS {
+  color: white;
+  font-family:'Book Antiqua';
+  font-size: 10px; 
+  font-weight: normal;
+  text-align: center;
+  position: absolute;
+  transform: translateY(-25px);
+}
 /* #endregion */
 
+/* #region BUTTON */
+.leftButton {
+  background: transparent;
+  border: 1px solid purple;
+  line-height: 22.5px;  
+  width: 120px;
+  height: 22.5px; 
+  color: yellow;
+  font-size: 15px; 
+  font-weight: normal;
+  text-align: left;
+  padding-left: 3px;
+}
+
+.leftButton:hover {
+  color: darkred;
+}
+
+.rightOSFrame {
+  text-decoration: none;
+  background-color: black;
+  border: 2px solid purple;
+  line-height: 22.5px;  
+  width: 130px;
+  height: 80px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.rightOSButton {
+  display: inline-block;
+  text-decoration: none;
+  width: 130px;
+  height: 80px; 
+  text-align: center;
+}
+
+.rightOSButton:hover {
+  color: darkred;
+}
+
+.playButton {
+  position: absolute;
+  text-decoration: none;
+  border: 1px solid blue;
+  width: 105px;
+  height: 17.5px; 
+  text-align: center;
+  transform: translateY(25px);
+}
+/* #endregion */
 
 

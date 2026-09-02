@@ -198,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ['#miscellaneous', '#misButton'],
         ['#personalInformation', '#perButton'],
         ['#archives', '#arcButton'],
+        ['#songChooseOS', '#sonButton'],
         ['#albums', '#albButton'],
         ['#storyPopup', '#storyTrigger']
     ];

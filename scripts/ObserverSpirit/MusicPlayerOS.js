@@ -1,12 +1,6 @@
 (function() {
   // ----- 音乐列表 -----
-  const playlist = [
-    { name: 'イリュージョンズリターン', url: 'http://music.163.com/song/media/outer/url?id=3334170535.mp3' },
-    { name: '幻覚ノ庭園', url: 'http://music.163.com/song/media/outer/url?id=3334170690.mp3' },
-    { name: '動かない魂と漂う人', url: 'http://music.163.com/song/media/outer/url?id=3335430849.mp3' },
-    { name: '灯台の謎めいた少女', url: 'http://music.163.com/song/media/outer/url?id=3356784995.mp3' },
-    { name: '不思議の国のコーイアックス', url: 'http://music.163.com/song/media/outer/url?id=3361037292.mp3' }
-  ];
+  let playlist = [];
 
   // DOM 元素
   const container = document.querySelector('.frameMusic #trackListContainer');
@@ -26,12 +20,28 @@
   const volumeIcon = document.querySelector('.frameMusic #volumeIcon');
 
   if (!container || !audio || !nowLabel || !errorDisplay) {
-    console.warn('播放器元素未找到');
     return;
   }
 
   let currentIndex = -1;
   let isDragging = false;
+
+  // ----- 加载 JSON 数据 -----
+  function loadPlaylistFromJSON() {
+    return fetch('../datas/MusicOSData.json')
+      .then(response => {
+        if (!response.ok) {
+          return;
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data && data.playlist && Array.isArray(data.playlist)) {
+          playlist = data.playlist;
+        }
+        return playlist;
+      });
+  }
 
   // ----- 音频事件绑定 -----
   audio.addEventListener('timeupdate', function() {
@@ -44,13 +54,11 @@
 
   audio.addEventListener('loadedmetadata', function() {
     updateTimeDisplay();
-    // 同步音量
     volumeFill.style.width = (audio.volume * 100) + '%';
   });
 
   audio.addEventListener('play', function() {
     playBtn.textContent = '⏸';
-    // 更新曲目状态
     if (currentIndex >= 0) {
       updateStatusDot(currentIndex, 'playing');
     }
@@ -75,7 +83,6 @@
   });
 
   // ----- 自定义控件事件 -----
-  // 播放/暂停
   playBtn.addEventListener('click', function() {
     if (audio.paused) {
       audio.play().catch(() => {});
@@ -84,7 +91,6 @@
     }
   });
 
-  // 进度条点击
   progressBar.addEventListener('click', function(e) {
     const rect = this.getBoundingClientRect();
     const percent = (e.clientX - rect.left) / rect.width;
@@ -93,7 +99,6 @@
     }
   });
 
-  // 进度条拖拽
   progressBar.addEventListener('mousedown', function(e) {
     isDragging = true;
     const rect = this.getBoundingClientRect();
@@ -120,7 +125,6 @@
     isDragging = false;
   });
 
-  // 音量控制
   volumeBar.addEventListener('click', function(e) {
     const rect = this.getBoundingClientRect();
     let percent = (e.clientX - rect.left) / rect.width;
@@ -130,7 +134,6 @@
     updateVolumeIcon(percent);
   });
 
-  // 音量图标点击静音切换
   volumeIcon.addEventListener('click', function() {
     if (audio.muted) {
       audio.muted = false;
@@ -177,14 +180,9 @@
 
   function formatRemainingTime(seconds) {
     if (!seconds || isNaN(seconds) || !isFinite(seconds)) return '00:00';
-    
-    // 确保是正数
     seconds = Math.max(0, seconds);
-    
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    
-    // 固定两位分钟，两位秒数
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   }
 
@@ -278,10 +276,8 @@
           if (i !== index) updateStatusDot(i, 'idle');
         });
         errorDisplay.style.display = 'none';
-        // 更新进度条
         progressFill.style.width = '0%';
-      }).catch(err => {
-        console.warn('播放失败:', err);
+      }).catch(() => {
         updateStatusDot(index, 'error');
         errorDisplay.style.display = 'block';
         currentIndex = index;
@@ -291,39 +287,37 @@
   }
 
   function updateStatus() {
-      if (audio.paused) {
-          statusEl.textContent = 'PAUSING';
-          statusEl.classList.add('paused');
-      } else {
-          statusEl.textContent = 'PLAYING';
-          statusEl.classList.remove('paused');
-      }
+    if (audio.paused) {
+      statusEl.textContent = 'PAUSING';
+      statusEl.classList.add('paused');
+    } else {
+      statusEl.textContent = 'PLAYING';
+      statusEl.classList.remove('paused');
+    }
   }
 
-  // 监听事件
   audio.addEventListener('play', updateStatus);
   audio.addEventListener('pause', updateStatus);
   audio.addEventListener('ended', updateStatus);
   audio.addEventListener('playing', updateStatus);
 
-  // 页面加载时初始化状态
-  updateStatus();
-
   // ----- 初始化 -----
   function init() {
-    renderTracks();
-    if (playlist.length > 0) {
-      const first = playlist[0];
-      audio.src = first.url;
-      audio.load();
-      currentIndex = 0;
-      updateActiveButton(0);
-      nowLabel.textContent = `${first.name}`;
-      updateStatusDot(0, 'idle');
-      // 初始化音量显示
-      volumeFill.style.width = (audio.volume * 100) + '%';
-      updateVolumeIcon(audio.volume);
-    }
+    loadPlaylistFromJSON().then(() => {
+      renderTracks();
+      if (playlist.length > 0) {
+        const first = playlist[0];
+        audio.src = first.url;
+        audio.load();
+        currentIndex = 0;
+        updateActiveButton(0);
+        nowLabel.textContent = `${first.name}`;
+        updateStatusDot(0, 'idle');
+        volumeFill.style.width = (audio.volume * 100) + '%';
+        updateVolumeIcon(audio.volume);
+      }
+      updateStatus();
+    });
   }
 
   init();

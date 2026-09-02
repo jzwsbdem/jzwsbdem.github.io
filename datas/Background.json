@@ -1,0 +1,36 @@
+{
+  "decBackground": [
+    "./images/decoration/background/1.gif",
+    "./images/decoration/background/2.gif",
+    "./images/decoration/background/3.gif",
+    "./images/decoration/background/4.gif",
+    "./images/decoration/background/5.gif",
+    "./images/decoration/background/6.gif",
+    "./images/decoration/background/7.gif",
+    "./images/decoration/background/8.gif",
+    "./images/decoration/background/9.gif",
+    "./images/decoration/background/10.gif",
+    "./images/decoration/background/11.gif",
+    "./images/decoration/background/12.gif",
+    "./images/decoration/background/13.gif",
+    "./images/decoration/background/14.gif",
+    "./images/decoration/background/15.gif",
+    "./images/decoration/background/16.gif",
+    "./images/decoration/background/17.gif",
+    "./images/decoration/background/18.gif",
+    "./images/decoration/background/19.gif",
+    "./images/decoration/background/20.gif"
+  ],
+  "mainBackground": [
+    "./images/background/1.jpg",
+    "./images/background/2.jpg",
+    "./images/background/3.jpg",
+    "./images/background/4.jpg",
+    "./images/background/5.jpg",
+    "./images/background/6.jpg",
+    "./images/background/7.jpg",
+    "./images/background/8.jpg",
+    "./images/background/9.jpg",
+    "./images/background/10.jpg"
+  ]
+}

@@ -39,14 +39,14 @@
             <h2 class="leftTextTitle">☆ 水仙導航 ☆</h2>
             <div class="leftInnerFrame">
                 <div class="character"></div>
-                <a href="./pages/MusicRoom.html" class="leftButton1">MUSIC ROOM</a>
-                <a href="./datas/LuminousKnight/index.html" class="leftButton1">個人開發遊戲</a>
-                <a href="./pages/404.html" class="leftButton1">水仙設定</a>
-                <div id="perButton" class="leftButton1">個人資訊</div>
-                <div id="arcButton" class="leftButton1">檔案館</div>
-                <a href="./pages/404.html" class="leftButton1">畫廊</a>
-                <div id="friButton" class="leftButton1">友情鏈接</div>
-                <div id="misButton" class="leftButton1">雜項</div>
+                <a href="./pages/MusicRoom.html" class="leftButton">MUSIC ROOM</a>
+                <a href="./datas/LuminousKnight/index.html" class="leftButton">個人開發遊戲</a>
+                <a href="./pages/404.html" class="leftButton">水仙設定</a>
+                <div id="perButton" class="leftButton">個人資訊</div>
+                <div id="arcButton" class="leftButton">檔案館</div>
+                <a href="./pages/404.html" class="leftButton">畫廊</a>
+                <div id="friButton" class="leftButton">友情鏈接</div>
+                <div id="misButton" class="leftButton">雜項</div>
             </div>
         </div>
 
@@ -62,7 +62,14 @@
                 <span class="seconds" id="seconds">00</span>
                 </div>
                 <div class="dateDisplay" id="dateDisplay"></div>
-                <a href="./pages/ObserverSpirit.html" class="leftButton1">MUSIC ROOM</a>
+                <div class="rightOSFrame">
+                    <h2 class="titleOS">♬ 銀の點唱機 ♬ </h2>
+                    <div id="sonButton" class="rightNameFrame">
+                        <div class="playText"></div>
+                    </div>
+                    <button class="playButton"></button>
+                    <a href="./pages/ObserverSpirit.html" class="rightOSButton"></a>
+                </div>
             </div>
         </div>
 
@@ -134,6 +141,27 @@
             </div>
         </div>
 
+        <!-- ======== SONG CHOOSE OS ======== -->
+        <div id="songChooseOS" class="popup-overlay">
+            <div class="popup-inner">
+                <button class="popup-close-btn" data-close>✕</button>
+                <h2 class="popup-title">☆ 音樂選擇 ☆</h2>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="0">青春舞曲2000</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="1">火車</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="2">原鄉 II</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="3">長征</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="4">台北紅玫瑰</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="5">天雨</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="6">紅燈碼頭</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="7">忘記他</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="8">喜歡你</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="9">俾面派對</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="10">不可一世</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="11">亞拉伯跳舞女郎</a>
+                    <a href="javascript:void(0)" class="innerButton" data-playlist="12">冷雨夜</a>
+            </div>
+        </div>
+
         <!-- ======== ARCHIVES ======== -->
         <div id="archives" class="popup-overlay">
             <div class="popup-inner">
@@ -149,8 +177,8 @@
         <div class="tecText">技術支援:<a href="https://github.com/biyuehu" class="tecInnerText"> Arimura Sena</a></div>
     </div>
 
-    <script src="./scripts/RandomDecBG.js"></script>
-    <script src="./scripts/RandomMainBG.js"></script>
+    <script src="./scripts/ObserverSpirit/MainPlayerOS.js"></script>
+    <script src="./scripts/RandomBackground.js"></script>
     <script src="./scripts/WebsiteInformation.js"></script>
     <script src="./scripts/PopupFrame.js"></script>
     <script src="./scripts/Adaptation.js"></script>

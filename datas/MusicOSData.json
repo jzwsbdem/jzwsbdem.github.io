@@ -1,0 +1,17 @@
+{
+  "playlist": [
+    {"name":"青春舞曲2000","url":"../datas/MusicOS/青春舞曲2000.mp3"},
+    {"name":"火車","url":"../datas/MusicOS/火車.mp3"},
+    {"name":"原鄉 II","url":"../datas/MusicOS/原鄉 II.mp3"},
+    {"name":"長征","url":"../datas/MusicOS/長征.mp3"},
+    {"name":"臺北紅玫瑰","url":"../datas/MusicOS/臺北紅玫瑰.mp3"},
+    {"name":"天雨","url":"../datas/MusicOS/天雨.mp3"},
+    {"name":"紅燈碼頭","url":"../datas/MusicOS/紅燈碼頭.mp3"},
+    {"name":"忘記他","url":"../datas/MusicOS/忘記他.mp3"},
+    {"name":"喜歡你","url":"../datas/MusicOS/喜歡你.mp3"},
+    {"name":"俾面派對","url":"../datas/MusicOS/俾面派對.mp3"},
+    {"name":"不可一世","url":"../datas/MusicOS/不可一世.mp3"},
+    {"name":"亞拉伯跳舞女郎","url":"../datas/MusicOS/亞拉伯跳舞女郎.mp3"},
+    {"name":"冷雨夜","url":"../datas/MusicOS/冷雨夜.mp3"}
+  ]
+}

@@ -4,6 +4,15 @@
   100% { transform: translateX(75%); }
 }
 
+@keyframes scrollRight2 {
+  0% {
+    transform: translateX(110px);
+  }
+  100% {
+    transform: translateX(-105%);
+  }
+}
+
 @keyframes blink1 {
     0% { opacity: 0.5; }
     50% { opacity: 1; }
@@ -296,23 +305,6 @@ body {
   font-weight: normal;
 }
 
-.leftButton1 {
-  background: transparent;
-  border: 1px solid purple;
-  line-height: 22.5px;  
-  width: 120px;
-  height: 22.5px; 
-  color: yellow;
-  font-size: 15px; 
-  font-weight: normal;
-  text-align: left;
-  padding-left: 3px;
-}
-
-.leftButton1:hover {
-  color: darkred;
-}
-
 .rightTextTitle {
   text-decoration: underline;
   line-height: 1;
@@ -359,7 +351,6 @@ body {
 
 }
 
-
 .bottomText1 {
   line-height: 0;
   color: yellow;
@@ -398,5 +389,108 @@ body {
 }
 /* #endregion */
 
+/* #region BUTTON */
+.leftButton {
+  background: transparent;
+  border: 1px solid purple;
+  line-height: 22.5px;  
+  width: 120px;
+  height: 22.5px; 
+  color: yellow;
+  font-size: 15px; 
+  font-weight: normal;
+  text-align: left;
+  padding-left: 3px;
+}
+
+.leftButton:hover {
+  color: darkred;
+}
+/* #endregion */
+
+/* #region Observer Spirit Music Player */
+.rightOSFrame {
+  text-decoration: none;
+  background-color: black;
+  border: 2px solid purple;
+  width: 130px;
+  height: 80px; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.rightNameFrame {
+  z-index: 1;
+  background-color: rgb(18, 18, 18);
+  width: 110px;
+  height: 17.5px;
+  min-height: 17.5px;
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 裁剪溢出 */
+  display: flex;
+  align-items: center;
+}
+
+.titleOS {
+  color: white;
+  font-family: 'Book Antiqua';
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.playText {
+  color: white;
+  font-family: 'Book Antiqua';
+  font-size: 10px;
+  font-weight: normal;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  will-change: transform;
+  animation: scrollRight2 8s linear infinite;
+}
+
+.playText.paused {
+  animation-play-state: paused;
+}
+
+.rightOSButton {
+  z-index: 0;
+  display: inline-block;
+  text-decoration: none;
+  width: 130px;
+  height: 80px; 
+  text-align: center;
+  position: absolute;
+}
+
+.rightOSButton:hover {
+  color: darkred;
+}
+
+.playButton {
+  z-index: 1;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid blue;
+  width: 105px;
+  height: 20px;
+  text-align: center;
+  color: yellow;
+  font-size: 10px;
+  font-weight: normal;
+  cursor: pointer;
+  line-height: 20px;
+}
+/* #endregion */
 
 
