@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>銀の畫廊</title>
+    <link rel="stylesheet" href="../styles/Gallery.css">
+    <link rel="stylesheet" href="../styles/Font.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">★ 銀の畫廊 ★</div>
+
+        <div class="toolbar">
+            <span class="counter" id="countDisplay">Total: 0</span>
+            <div class="row-height-control">
+                <label>Row Height</label>
+                <input type="range" id="rowHeightSlider" min="60" max="300" value="120" step="2">
+                <span class="height-value" id="heightDisplay">120</span>
+            </div>
+        </div>
+
+        <!-- 图片网格 -->
+        <div class="grid" id="gridContainer"></div>
+
+        <footer>POWERED BY JZWSBDEM</footer>
+    </div>
+
+    <script src="../scripts/Gallery.js"></script>
+    <script src="../scripts/Slider.js"></script>
+</body>
+</html>

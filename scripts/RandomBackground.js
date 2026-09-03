@@ -4,7 +4,7 @@ let mainImages = [];
 
 async function loadImagesFromJSON() {
     try {
-        const response = await fetch('datas/Background.json');
+        const response = await fetch('../datas/Background.json');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
